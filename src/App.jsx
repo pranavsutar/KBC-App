@@ -1,10 +1,14 @@
 import "./App.css";
 import Trivia from "./components/Trivia";
+import data from "./text/data";
 import { useState } from "react";
 
 function App() {
 
 const [queNum, setQueNum] = useState(1);
+const [stop, setStop] = useState(false);
+const [earned, setEarned] = useState("Rs. 0");
+
 const moneyPyramid = [
     { id: "1", amount: "Rs. 5000" },
     { id: "2", amount: "Rs. 8000" },
@@ -30,13 +34,22 @@ const moneyPyramid = [
   return (
     <div className="app">
       <div className="main">
-        {/* <button id="incre" onClick={incre}>Incre</button> */}
-        <div className="top">
+        <h1>Who wants to be a Millionaire</h1>
+        
+          {stop ?<h2> {"You earned " + earned} </h2>:(
+            <>
+                    <div className="top">
           <div className="timer">30 </div>
         </div>
         <div className="bottom">
-          <Trivia/>
+          <Trivia data={data} setStop={setStop} queNum={queNum} setQueNum={setQueNum} />
         </div>
+            </>
+          
+          )}
+        
+        {/* <button id="incre" onClick={incre}>Incre</button> */}
+
       </div>
       <div className="pyramid">
         <ul className="moneylist">

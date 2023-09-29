@@ -113,13 +113,39 @@
 .answer:hover, .answer.active{
     background: linear-gradient(to bottom, rgba(40, 69, 235, 0.685), #060696);
 }
-/* 
+
 .answer.correct{
     animation: correct 3s ease forwards;
 } 
 
 @keyframes correct {
-    0%{
-        background: linear-gradient(to bottom, rgba(40, 69, 235, 0.685), #060696);
+    0%, 32%{
+        background: rgb(0, 0, 88);
     }
-} */
+
+    30%, 60%{
+        background:  #0202e7;
+    }
+
+    72%, 100%{
+        background: green;
+    }
+}
+
+.answer.wrong{
+    animation: wrong 3s ease forwards;
+} 
+
+@keyframes wrong {
+    0%, 32%{
+        background: rgb(0, 0, 88);
+    }
+
+    30%, 60%{
+        background:  #0202e7;
+    }
+
+    72%, 100%{
+        background: crimson;
+    }
+}
