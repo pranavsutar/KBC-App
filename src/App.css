@@ -8,6 +8,8 @@
 .main{
     width:75%;
     background: linear-gradient(to bottom, rgba(31, 29, 29, 0.096), #020230), url("./assets/bg.jpg")  center ;
+    display: flex;
+    flex-direction: column;
 }
 
 .pyramid{
@@ -40,3 +42,84 @@
     font-size: 20px;
     font-weight: 300;
 }
+/*  */
+
+.top{
+    height: 50%;
+    position: relative;
+}
+
+.timer{
+    font-size: 30px;
+    font-weight: 700;
+    /* margin: 20px; */
+    height: 70px;
+    width: 70px;
+    border: 5px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    left: 100px;
+}
+
+.bottom{
+    height: 50%;
+}
+
+.trivia{
+    border: 1px solid white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.question{
+    width: 80%;
+    background: linear-gradient(to bottom, rgba(51, 49, 49, 0.396), #020230);
+    border: 2px solid white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;    
+}
+
+.answers{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 10px 20px 10px;
+}
+
+.answer{
+    width: 40%;
+    background: linear-gradient(to bottom,#020230, rgba(91, 79, 79, 0.396));
+    border: 1px solid white;
+    border-radius: 15px;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 10px;
+    cursor: pointer;
+
+}
+
+.answer:hover, .answer.active{
+    background: linear-gradient(to bottom, rgba(40, 69, 235, 0.685), #060696);
+}
+/* 
+.answer.correct{
+    animation: correct 3s ease forwards;
+} 
+
+@keyframes correct {
+    0%{
+        background: linear-gradient(to bottom, rgba(40, 69, 235, 0.685), #060696);
+    }
+} */
