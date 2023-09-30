@@ -42,6 +42,7 @@
     font-size: 20px;
     font-weight: 300;
 }
+
 /*  */
 
 .top{
@@ -148,4 +149,20 @@
     72%, 100%{
         background: crimson;
     }
+}
+
+
+h1.endgame{
+    /* border: 2px solid white; */
+
+    /* height: 100%; */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: relative;
+    margin: auto;
+    font: 700 50px 'Montserrat', sans-serif;
+    color: white;
+
 }

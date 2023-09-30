@@ -23,7 +23,9 @@ export default function Trivia({data, setStop, queNum, setQueNum}) {
                     setOptionClass("answer");
                 }, 3500);
             }else{
-                setStop(true);
+                setTimeout(() => {
+                    setStop(true);
+                }, 3500);
             }
         }, 1500);
     }
