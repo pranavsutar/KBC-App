@@ -42,7 +42,7 @@ const moneyPyramid = [
   return (
     <div className="app">
       <div className="main">
-        <h1>Who wants to be a Millionaire</h1>
+        <h1>Kaun Banega Karodpati</h1>
         
           {stop ?<h1 className="endgame"> {"You earned " + earned} </h1>:(
             <>
