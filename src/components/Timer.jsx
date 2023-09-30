@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function Timer({ setStop, queNum }) {
-    const [time, setTime] = useState(3);
+    const [time, setTime] = useState(30);
 
     
     useEffect(() => {
@@ -14,7 +14,7 @@ export default function Timer({ setStop, queNum }) {
     }, [time, setStop]);
     
     useEffect(() => {
-        setTime(3);
+        setTime(30);
     }, [queNum]);
     return time;
 }
