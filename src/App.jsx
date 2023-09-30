@@ -1,6 +1,7 @@
 import "./App.css";
 import Timer from "./components/Timer";
 import Trivia from "./components/Trivia";
+import Start from "./components/Start";
 import data from "./text/data";
 import { useEffect, useMemo, useState } from "react";
 
@@ -34,17 +35,51 @@ const moneyPyramid = [
     queNum > 1 && setEarned(moneyPyramid.find((m)=> m.id == queNum-1)?.amount); 
   }, [queNum])
 
+
   const incre = () => {
     setQueNum(queNum + 1);
   }
   ;
+  if (userName === null) {
+    return (
+      <div className="app">
+        <Start setUserName={setUserName} setQueNum={setQueNum}/>
+        {/* <div className="main">
+          <h1>Kaun Banega Karodpati</h1>
+          <div className="start">
+            <input type="name" placeholder="Enter your name" className="startinput"   />
+            <button className="startbtn" onClick={() => {
+                setUserName(document.querySelector(".startinput").value);
+                setQueNum(1);
+              }}>
+                Start
+            </button>
+          </div>
+        </div> */}
+      </div>
+    );
+  }
 
   return (
     <div className="app">
       <div className="main">
-        <h1>Kaun Banega Karodpati</h1>
+        <h1 id="title">Kaun Banega Karodpati</h1>
         
-          {stop ?<h1 className="endgame"> {"You earned " + earned} </h1>:(
+          {stop ? <h1 className="endgame">
+           <p> You earned: {earned}</p>
+            
+            {queNum != 15 ? "Play gain to gain more money!" : "You have Completed the game!"}
+            <p>Congradulations {userName} !!!</p>
+            
+            
+            <button className="playagain" onClick={() => {
+              setStop(false);
+              setEarned("Rs. 24,00,000");
+              setQueNum(1);
+            }}>
+              Play Again
+            </button>
+          </h1>:(
             <>
                     <div className="top">
           <div className="timer"><Timer setStop={setStop} queNum={queNum} />

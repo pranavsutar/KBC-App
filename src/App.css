@@ -49,6 +49,13 @@
     height: 50%;
     position: relative;
 }
+#title{
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px;
+    text-shadow: 2px 2px 2px black;
+}
 
 .timer{
     font-size: 30px;
@@ -63,7 +70,7 @@
     align-items: center;
     position: absolute;
     bottom: 10px;
-    left: 100px;
+    left: 48%;
 }
 
 .bottom{
@@ -152,17 +159,28 @@
 }
 
 
-h1.endgame{
+.endgame{
     /* border: 2px solid white; */
 
-    /* height: 100%; */
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    position: relative;
-    margin: auto;
+    height: 100%;
     font: 700 50px 'Montserrat', sans-serif;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
+}
+
+button.playagain{
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, rgba(51, 49, 49, 0.396), #020230);
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    outline: none;
 }
